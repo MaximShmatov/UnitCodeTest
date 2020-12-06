@@ -1,0 +1,12 @@
+include ../contacts/contacts
+include ../menu-main/menu-main
+
+mixin header
+  div.header
+    div.header__logo
+      div.header__logo-block
+        div.header__logo-block-img
+    div.header__contacts
+      +contacts({theme: "orange"})
+    div.header__menu
+      +menu-main

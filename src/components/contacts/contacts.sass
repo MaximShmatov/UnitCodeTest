@@ -1,0 +1,123 @@
+.contacts
+  width: 185px
+
+  &__order, &__rate
+    display: block
+    font-size: 17px
+    text-decoration: none
+    text-transform: uppercase
+    text-align: center
+    padding: 6px
+    margin-top: 7px
+    border-bottom: 2px solid white
+    color: white
+
+  &__order
+    letter-spacing: - .1px
+
+  &__rate
+    letter-spacing: .8px
+
+  &__panel
+    background-color: rgba(255, 255, 255, 0.15)
+    box-sizing: border-box
+    padding: 12px 22px 12px 18px
+    margin-top: 16px
+
+    &-phone
+      display: flex
+      flex-direction: column
+
+      &-number, &-caption
+        text-transform: uppercase
+        line-height: 100%
+        white-space: nowrap
+
+      &-number
+        font-size: 16px
+        text-align: left
+        color: white
+
+      &-caption
+        font-size: 8px
+        text-align: right
+        letter-spacing: 0.7px
+        color: rgb(154, 154, 154)
+        padding-top: 4px
+
+      &:nth-child(1)
+        & span:first-child
+          letter-spacing: - .1px
+
+      &:nth-child(2)
+        margin-top: 6px
+
+        & span:first-child
+          letter-spacing: .5px
+
+  &_theme_orange
+    .contacts
+      &__order, &__rate
+        &:hover
+          opacity: .5
+
+      &__order
+        font-size: 13px
+        background-color: #D0AA8C
+        color: white
+
+      &__rate
+        font-size: 13px
+        background-color: white
+        color: #404040
+        border: 1px solid #404040
+
+      &__panel
+        padding: 12px
+
+        &-phone-number
+          font-size: 18px
+          color: #404040
+
+        &-phone-caption
+          display: flex
+          justify-content: space-between
+          align-items: center
+          font-size: 10px
+          letter-spacing: 1px
+          text-align: left
+          color: #D0AA8C
+          vertical-align: center
+          padding-top: 7px
+
+          &::after
+            content: ''
+            width: 100%
+            height: 1px
+            margin-left: 10px
+            background-color: #D0AA8C
+            margin-bottom: 1px
+
+  &_theme_white
+    .contacts
+      &__order, &__rate
+        &:hover
+          border-color: #737075
+          color: #737075
+
+      &__panel-social
+        display: flex
+        justify-content: space-between
+        padding-top: 7px
+
+        &-icon
+          font-family: Flaticon, Icomoon, sans-serif
+          font-size: 27px
+          font-weight: normal
+          text-decoration: none
+          color: #9A9A9A
+
+          &:nth-child(3)
+            color: #D0AA8C
+            border-radius: 3px
+            overflow: hidden

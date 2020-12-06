@@ -1,0 +1,10 @@
+import './favicon.ico';
+import './favicon-16x16.png';
+import './favicon-32x32.png';
+import './android-chrome-192x192.png';
+import './android-chrome-256x256.png';
+import './pegasus.webmanifest';
+import './safari-pinned-tab.svg';
+import './apple-touch-icon.png';
+import './mstile-150x150.png';
+import './browserconfig.xml';

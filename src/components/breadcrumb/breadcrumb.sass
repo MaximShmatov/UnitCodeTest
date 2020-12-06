@@ -1,0 +1,29 @@
+.breadcrumb
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: white
+  font-size: 11px
+  font-weight: bold
+  border-bottom: 1px solid #E8E8E8
+  margin: 0
+  padding: 0
+
+  &__item
+    list-style: none
+    text-transform: uppercase
+
+    &-ref
+      display: inline-block
+      text-decoration: none
+      padding: 8px 5px
+      color: #332F36
+
+      &:hover
+        opacity: .4
+
+    &:not(:last-of-type)::after
+      content: '|'
+
+    &:last-of-type a
+      color: #D0AA8C

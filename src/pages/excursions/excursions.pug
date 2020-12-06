@@ -1,0 +1,23 @@
+extends ../../templates/main/main
+
+include ../../components/breadcrumb/breadcrumb
+include ../../components/title/title
+include ../../components/card/card
+
+block page
+  main.page-excursions
+    div.page-excursions__breadcrumbs
+      +breadcrumb
+    div.page-excursions__title
+      +title
+    p.page-excursions__detail
+      | Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+      | nisi ut aliquip ex ea commodo consequat.
+    p.page-excursions__detail
+      | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+      | dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt.
+    -for (let i = 0; i < 6; i++)
+      div.page-excursions__cards
+        +card

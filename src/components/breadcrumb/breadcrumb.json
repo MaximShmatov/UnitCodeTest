@@ -1,0 +1,17 @@
+[
+  {
+    "key": "home",
+    "value": "Главная",
+    "href": "/mock-address"
+  },
+  {
+    "key": "developments",
+    "value": "События",
+    "href": "/mock-address"
+  },
+  {
+    "key": "excursions",
+    "value": "Экскурсии",
+    "href": "/mock-address"
+  }
+]

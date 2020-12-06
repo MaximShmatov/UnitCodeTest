@@ -1,0 +1,49 @@
+include ../contacts/contacts
+
+mixin footer
+  -
+    const nav = [{
+      title: 'Наши машины',
+      items: [
+        'Mercedes S-Class',
+        'Mercedes V-Class',
+        'Mercedes E-Class',
+        'Rolls-Royce Ghost',
+        'Rolls-Royce Phantom',
+        'Bentley Mulsanne',
+      ],
+    }, {
+      title: 'Наш сервис',
+      items: [
+        'Корпоративное такси',
+        'Личный водитель',
+        'Бизнес встречи',
+        'Аэропорты',
+        'События',
+        'Экскурсии',
+      ],
+    }, {
+      title: 'О нас',
+      items: [
+        'Правила и условия',
+        'О нас',
+        'Аэропорты',
+        'Контакты',
+        'Блог',
+        'Автопарк',
+      ],
+    }]
+  div.footer
+    nav.footer__menu
+      - for (let i = 0; i < 3; i++)
+        section.footer__menu-block
+          h3.footer__menu-block-title #{nav[i].title}
+          hr.footer__menu-block-separator
+          ul.footer__menu-block-items
+          - for (let j = 0; j < 6; j++)
+            li.footer__menu-block-item
+              a.footer__menu-block-item-ref(href="/mock-address") #{nav[i].items[j]}
+        hr.footer__menu-separator
+      section.footer__menu-block
+        +contacts({theme: "white"})
+    p.footer__copyright 2010-2018 &copy;Pegasus Luxury Ltd. Company Number: 08104782. PCO-Operator Licence: 0086810101. All rights reserved.

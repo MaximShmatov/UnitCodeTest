@@ -1,0 +1,23 @@
+mixin contacts(props)
+  -
+    const { theme } = props
+    const classes = [
+      'contacts',
+      `contacts_theme_${theme}`,
+    ]
+  div(class= classes)
+    a.contacts__order(href="/mock-address") Сделать заказ
+    a.contacts__rate(href="/mock-address") Узнать тариф
+    div.contacts__panel
+      div.contacts__panel-phone
+        span.contacts__panel-phone-number +44 020 7719 8816
+        span.contacts__panel-phone-caption Круглосуточно
+      div.contacts__panel-phone
+        span.contacts__panel-phone-number +44 777 100 7676
+        span.contacts__panel-phone-caption Viber & Whatsup
+      - if(theme === 'white')
+        div.contacts__panel-social
+          a.contacts__panel-social-icon(href="http://instagram.com" target="_blank" rel="noopener noreferrer") &#xea92;
+          a.contacts__panel-social-icon(href="http://facebook.com" target="_blank" rel="noopener noreferrer") &#xea91;
+          a.contacts__panel-social-icon(href="http://plus.google.com" target="_blank" rel="noopener noreferrer") &#xea8c;
+          a.contacts__panel-social-icon(href="http://linkedin.com" target="_blank" rel="noopener noreferrer") &#xeac9;

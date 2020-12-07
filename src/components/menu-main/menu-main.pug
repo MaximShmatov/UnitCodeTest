@@ -1,7 +1,0 @@
-mixin menu-main
-  - const menuItems = ['Главная', 'Услуги', 'Автопарк', 'События', 'О нас', 'Контакты']
-  nav.menu-main
-    ul.menu-main__items
-      - for (let i = 0; i < 6; i++)
-        li.menu-main__item
-          a.menu-main__item-ref(href="/mock-address") #{menuItems[i]}

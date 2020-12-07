@@ -1,22 +1,21 @@
 .contacts
-  width: 185px
+  &__actions
+    &-order, &-rate
+      display: block
+      font-size: 17px
+      text-decoration: none
+      text-transform: uppercase
+      text-align: center
+      padding: 6px
+      margin-top: 7px
+      border-bottom: 2px solid white
+      color: white
 
-  &__order, &__rate
-    display: block
-    font-size: 17px
-    text-decoration: none
-    text-transform: uppercase
-    text-align: center
-    padding: 6px
-    margin-top: 7px
-    border-bottom: 2px solid white
-    color: white
+    &-order
+      letter-spacing: - .1px
 
-  &__order
-    letter-spacing: - .1px
-
-  &__rate
-    letter-spacing: .8px
+    &-rate
+      letter-spacing: .8px
 
   &__panel
     background-color: rgba(255, 255, 255, 0.15)
@@ -57,22 +56,25 @@
 
   &_theme_orange
     .contacts
-      &__order, &__rate
-        &:hover
-          opacity: .5
+      &__actions
+        &-order, &-rate
+          &:hover
+            opacity: .5
 
-      &__order
-        font-size: 13px
-        background-color: #D0AA8C
-        color: white
+        &-order
+          font-size: 13px
+          background-color: #D0AA8C
+          border: none
+          color: white
 
-      &__rate
-        font-size: 13px
-        background-color: white
-        color: #404040
-        border: 1px solid #404040
+        &-rate
+          font-size: 13px
+          background-color: white
+          color: #404040
+          border: 1px solid #404040
 
       &__panel
+        background: transparent
         padding: 12px
 
         &-phone-number
@@ -98,9 +100,44 @@
             background-color: #D0AA8C
             margin-bottom: 1px
 
+    @media (min-width: 767px)
+      display: flex
+      flex-direction: row-reverse
+      align-items: center
+      justify-content: space-between
+      width: 100%
+      .contacts
+        &__actions
+          padding: 0 15px
+        &__panel
+          padding: 0 16px
+          margin-top: 5px
+
+    @media (min-width: 1200px)
+      .contacts
+        &__actions, &__panel
+          display: flex
+
+        &__actions
+          flex-direction: row-reverse
+
+          &-order, &-rate
+            margin-top: 23px
+            width: 173px
+
+          &-rate
+            margin-right: 25px
+
+        &__panel
+          &-phone
+            margin-top: 22px
+            &:last-of-type
+              margin-left: 68px
+
+
   &_theme_white
     .contacts
-      &__order, &__rate
+      &__actions-order, &__actions-rate
         &:hover
           border-color: #737075
           color: #737075

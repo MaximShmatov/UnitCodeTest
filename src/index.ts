@@ -12,7 +12,7 @@ import './pages/excursions/excursions.sass';
 import './components/breadcrumb/breadcrumb';
 import './components/breadcrumb/breadcrumb.sass';
 
-import './components/menu-main/menu-main.sass';
+import './components/menu-burger/menu-burger.sass';
 
 import './components/contacts/contacts.sass';
 

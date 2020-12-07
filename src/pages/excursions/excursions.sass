@@ -1,6 +1,23 @@
 .page-excursions
+  max-width: 1200px
+  width: 100%
+  margin: 0 auto
 
-  &__breadcrumbs
-  &__title
   &__detail
+    max-width: 736px
+    text-align: center
+    margin: 0 auto
+    line-height: 17px
+    letter-spacing: .5px
+
+    &:last-of-type
+      margin: 16px auto 50px
+
   &__cards
+    display: grid
+    grid-template-columns: 1fr 1fr
+    justify-content: space-between
+    justify-items: center
+    grid-gap: 44px 28px
+    @media (max-width: 767px)
+      grid-template-columns: 1fr

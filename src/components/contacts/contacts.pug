@@ -6,8 +6,9 @@ mixin contacts(props)
       `contacts_theme_${theme}`,
     ]
   div(class= classes)
-    a.contacts__order(href="/mock-address") Сделать заказ
-    a.contacts__rate(href="/mock-address") Узнать тариф
+    div.contacts__actions
+      a.contacts__actions-order(href="/mock-address") Сделать заказ
+      a.contacts__actions-rate(href="/mock-address") Узнать тариф
     div.contacts__panel
       div.contacts__panel-phone
         span.contacts__panel-phone-number +44 020 7719 8816

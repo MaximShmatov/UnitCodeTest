@@ -33,17 +33,20 @@ mixin footer
         'Автопарк',
       ],
     }]
+
   div.footer
     nav.footer__menu
       - for (let i = 0; i < 3; i++)
+        - const id = Math.random()
         section.footer__menu-block
           h3.footer__menu-block-title #{nav[i].title}
+          input.footer__menu-block-checkbox(type = "checkbox" id = id)
+          label.footer__menu-block-label(for=id)
           hr.footer__menu-block-separator
           ul.footer__menu-block-items
-          - for (let j = 0; j < 6; j++)
-            li.footer__menu-block-item
-              a.footer__menu-block-item-ref(href="/mock-address") #{nav[i].items[j]}
-        hr.footer__menu-separator
+            - for (let j = 0; j < 6; j++)
+              li.footer__menu-block-item
+                a.footer__menu-block-item-ref(href="/mock-address") #{nav[i].items[j]}
       section.footer__menu-block
         +contacts({theme: "white"})
-    p.footer__copyright 2010-2018 &copy;Pegasus Luxury Ltd. Company Number: 08104782. PCO-Operator Licence: 0086810101. All rights reserved.
+    p.footer__copyright 2010-2018 &copy;Pegasus Luxury Services Ltd. Company Number: 08104782. PCO-Operator Licence: 0086810101. All rights reserved.

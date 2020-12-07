@@ -1,0 +1,12 @@
+mixin menu-burger
+  -
+    const menuItems = ['Главная', 'Услуги', 'Автопарк', 'События', 'О нас', 'Контакты']
+    const id = Math.random()
+  nav.menu-burger
+    input.menu-burger__checkbox(type="checkbox" id=id)
+    label.menu-burger__label(for=id)
+    ul.menu-burger__items
+      - for (let i = 0; i < 6; i++)
+        li.menu-burger__item
+          a.menu-burger__item-ref(href="/mock-address") #{menuItems[i]}
+        li.menu-burger__separator

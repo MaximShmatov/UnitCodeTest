@@ -1,5 +1,5 @@
 include ../contacts/contacts
-include ../menu-main/menu-main
+include ../menu-burger/menu-burger
 
 mixin header
   div.header
@@ -8,5 +8,6 @@ mixin header
         div.header__logo-block-img
     div.header__contacts
       +contacts({theme: "orange"})
-    div.header__menu
-      +menu-main
+    div.header__menu-wrapper
+      div.header__menu
+        +menu-burger

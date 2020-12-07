@@ -1,0 +1,95 @@
+.menu-burger
+  font-family: Romul, Arial, sans-serif
+  font-weight: normal
+  width: 100%
+  box-sizing: border-box
+  padding: 10px 15px
+  background-color: #2F2C34
+
+  &__checkbox
+    position: absolute
+    opacity: 0
+    z-index: -1
+
+    &:hover + label
+      opacity: .5
+
+    &:active + label
+      background-color: #D0AA8C
+
+    &:checked ~ ul
+      width: 100%
+      height: 100%
+
+  &__label
+    display: block
+    width: 40px
+    height: 40px
+    margin-left: auto
+    border-radius: 3px
+    padding: 10px
+    box-sizing: border-box
+    border: 1px solid white
+
+    &:before, &:after
+      content: ''
+      display: block
+      height: 6px
+
+    &:before
+      border-top: 2px solid white
+      border-bottom: 1px solid white
+
+    &:after
+      border-top: 1px solid white
+      border-bottom: 2px solid white
+
+  &__items
+    display: block
+    width: 0
+    height: 0
+    transition: width .5s
+    margin: 0
+    padding: 0
+    overflow: hidden
+
+  &__item
+    display: block
+    list-style: none
+    text-transform: uppercase
+    text-align: center
+    white-space: nowrap
+    padding: 11px 0
+
+    &-ref
+      font-size: 15px
+      color: white
+      text-decoration: none
+
+      &:hover
+        opacity: .5
+
+  &__separator
+    width: 100%
+    height: 0
+    border-bottom: 1px solid #737075
+
+@media (min-width: 767px)
+  .menu-burger
+    &__checkbox, &__label
+      display: none
+
+    &__items
+      display: flex
+      justify-content: space-between
+      width: 100%
+      height: 100%
+
+    &__separator
+      width: 0
+      height: 20px
+      border-right: 1px solid #737075
+      margin: auto 0
+
+      &:last-of-type
+        display: none
